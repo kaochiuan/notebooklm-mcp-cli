@@ -1,15 +1,12 @@
-"""Studio advanced tools — convenience wrappers for enhanced studio control."""
+"""Studio advanced — helper for studio type reference data."""
 
 from typing import Any
 
-from ._utils import logged_tool
 
+def _get_studio_types() -> dict[str, Any]:
+    """Return reference of all artifact types and their configurable parameters.
 
-@logged_tool()
-def studio_list_types() -> dict[str, Any]:
-    """List all supported studio artifact types with their options.
-
-    Returns a reference of all artifact types and their configurable parameters.
+    Called by studio_status(action="list_types").
     """
     types_info = {
         "audio": {
