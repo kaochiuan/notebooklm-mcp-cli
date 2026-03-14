@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.4.8] - 2026-03-14
+
+### Added
+- **Native Chat History Persistence** — Both the CLI (`nlm notebook query`) and the MCP server now perfectly persist their chat history directly into the NotebookLM web UI. All prompts sent via CLI or MCP agents will now appear in the notebook's native chat panel, sharing the same conversational context as the web UI. (Closes #92)
+- **OpenCode Support** — Full support for OpenCode in the `nlm setup` command (`nlm setup add opencode`) to automatically configure the NotebookLM MCP server for OpenCode. Includes smart config array injection and parsing. Thanks to **@woohyun212** for the comprehensive implementation and thorough unit tests (PR #95, closes #95).
+
+### Fixed
+- **MCP Profile Switching** — Fixed a bug where the MCP server wouldn't respect dynamic authentication profile changes made via `nlm login switch <profile>`. The server now automatically detects token file changes and gracefully reloads the NotebookLM client in real-time, matching the active profile perfectly.
 ## [0.4.7] - 2026-03-13
 
 ### Changed

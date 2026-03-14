@@ -77,7 +77,7 @@ Then use natural language: *"Create a notebook about quantum computing and gener
 | List notebooks | `nlm notebook list` | `notebook_list` |
 | Create notebook | `nlm notebook create` | `notebook_create` |
 | Add Sources (URL, Text, Drive, File) | `nlm source add` | `source_add` |
-| Query notebook (AI chat) | `nlm notebook query` | `notebook_query` |
+| Query notebook (persists to web UI) | `nlm notebook query` | `notebook_query` |
 | Create Studio Content (Audio, Video, etc.) | `nlm studio create` | `studio_create` |
 | Revise slide decks | `nlm slides revise` | `studio_revise` |
 | Download artifacts | `nlm download <type>` | `download_artifact` |
@@ -448,6 +448,8 @@ Simply chat with your AI tool (Claude Code, Cursor, Gemini CLI) using natural la
 - "What does this source say about security best practices?"
 - "Get an AI summary of what this notebook is about"
 - "Configure the chat to use a learning guide style with longer responses"
+
+*(All queries sent from CLI or MCP automatically persist in your NotebookLM web UI chat history!)*
 
 ### Content Generation
 

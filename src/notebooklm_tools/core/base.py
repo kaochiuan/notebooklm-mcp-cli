@@ -78,6 +78,7 @@ class BaseClient:
     
     # Misc
     RPC_GET_CONVERSATIONS = "hPTbtc"
+    RPC_DELETE_CHAT_HISTORY = "J7Gthc"
     RPC_PREFERENCES = "hT54vc"
     RPC_SUBSCRIPTION = "ozz5Z"
     RPC_SETTINGS = "ZwVcOc"

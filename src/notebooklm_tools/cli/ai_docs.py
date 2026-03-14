@@ -198,7 +198,7 @@ nlm notebook rename <id> "New Title"   # Rename notebook
 nlm notebook delete <id> --confirm     # Delete permanently
 nlm notebook query <id> "question"     # Chat with sources
 nlm notebook query <id> "question" --json  # JSON output
-nlm notebook query <id> "follow up" --conversation-id <cid>
+nlm notebook query <id> "follow up" --conversation-id <cid>  # Persists in web UI history
 nlm notebook query <id> "question" --source-ids <id1,id2>
 ```
 
@@ -282,6 +282,9 @@ nlm chat configure <notebook-id> --goal default
 nlm chat configure <notebook-id> --goal learning_guide
 nlm chat configure <notebook-id> --goal custom --prompt "Act as a tutor..."
 nlm chat configure <notebook-id> --response-length longer   # longer, default, shorter
+
+# NOTE: All CLI querying via `nlm notebook query` and MCP querying automatically persist 
+# their chat history natively into the NotebookLM web UI, enabling seamless cross-device sessions.
 ```
 
 **Verb-First:**
